@@ -1,0 +1,4 @@
+mediapipe==0.10.14
+numpy==1.26.4
+opencv-python==4.11.0.86
+python-osc==1.10.2
