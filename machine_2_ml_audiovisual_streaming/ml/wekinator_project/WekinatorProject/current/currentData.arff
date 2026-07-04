@@ -1,0 +1,16 @@
+@relation dataset
+
+@attribute ID numeric
+@attribute Time date 'yyyy/MM/dd HH:mm:ss:SSS'
+@attribute 'Training round' numeric
+@attribute features-1 numeric
+@attribute features-2 numeric
+@attribute features-3 numeric
+@attribute features-4 numeric
+@attribute features-5 numeric
+@attribute features-6 numeric
+@attribute features-7 numeric
+@attribute state {0,1,2,3,4}
+@attribute intensity numeric
+
+@data

@@ -29,9 +29,13 @@ void setup(){
     println("OSC address: " + OSC_CONTROL_ADDRESS);
 }
 // bucla principala de rendering
-void draw(){
+/*void draw(){
     background(20);//gri inchis
     drawDebugScreen(); //afis temporar valorile primite
+}*/
+void draw(){
+    drawVisualState();// deseneaza vizualul asociat starii curente
+    drawDebugScreen();// afiseaza temporar informatiile de debug
 }
 
 // apelata automat cand se primeste un mesaj OSC
