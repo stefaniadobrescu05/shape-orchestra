@@ -34,11 +34,11 @@ FEATURE_DEAD_BANDS = {
 
 # OSC destination on Machine 2.
 # Keep 127.0.0.1 for local testing, then replace it with Machine 2's LAN IP.
-MACHINE_2_IP = "127.0.0.1"
+MACHINE_2_IP = "172.20.10.2"
 OSC_PORT = 6448
 OSC_FEATURE_ADDRESS = "/shape/features"
 
-# Send one OSC packet every N frames in which a hand is detected.
+# Send one OSC packet every N frames in which a hand is detected
 SEND_EVERY_N_FRAMES = 2
 
 
