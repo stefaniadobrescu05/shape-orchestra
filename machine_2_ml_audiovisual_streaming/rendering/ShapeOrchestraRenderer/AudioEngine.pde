@@ -120,7 +120,7 @@ void updateCalmAudio(float intensity) {
   float calmFrequency = 130.81 +2.0*sin(millis()*0.0005);
   calm.freq(calmFrequency);
   // volum
-  float master =map(intensity, 0, 1, 0.03, 0.12);
+    float master =map(intensity, 0, 1, 0.06, 0.18);
   calm.amp(master*breathing);
 }
 // pulse
@@ -132,7 +132,7 @@ void updatePulseAudio(float intensity) {
     float baseFrequency =map(intensity, 0, 1, 68, 82);
      float pitchDrop =18.0*exp(-beatPhase*18.0); // incepe putin mai sus si coboara
     pulse.freq(baseFrequency+pitchDrop);
-    float master =map(intensity, 0, 1, 0.10, 0.28);
+    float master =map(intensity, 0, 1, 0.16, 0.40);
     pulse.amp(envelope*master);
 }
 // tension
@@ -168,6 +168,7 @@ void updateTensionAudio(float intensity){
     tension2.amp(master * noteEnvelope * 0.38);
     tension3.amp(master * noteEnvelope * (0.15 + 0.35 * periodicWave));
 }
+
 // climax
 void updateClimaxAudio(float intensity){
 
