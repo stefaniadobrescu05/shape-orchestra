@@ -1,4 +1,5 @@
 import oscP5.*;
+import processing.sound.*;
 
 OscP5 oscP5; // osc receiver
 
@@ -23,6 +24,8 @@ void setup(){
     // pornesc receiver-ul OSC
     oscP5 = new OscP5(this, OSC_RECEIVE_PORT);
 
+    setupAudio();
+
     // info pt debug
     println("Shape Orchestra Renderer started");
     println("OSC port: " + OSC_RECEIVE_PORT);
@@ -35,7 +38,8 @@ void setup(){
 }*/
 void draw(){
     drawVisualState();// deseneaza vizualul asociat starii curente
-    drawDebugScreen();// afiseaza temporar informatiile de debug
+    updateAudio(currentState,currentIntensity);// actualizeaza sunetul in fct de stare si intensitate
+    //drawDebugScreen();// afiseaza temporar informatiile de debug
 }
 
 // apelata automat cand se primeste un mesaj OSC
