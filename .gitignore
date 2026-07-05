@@ -1,9 +1,44 @@
+# Python virtual environments
 .venv/
-__pycache__/
- HEAD
-*.pyc
-*.autosave
+venv/
+env/
 
+# Python bytecode and tool caches
+__pycache__/
 *.py[cod]
 .pytest_cache/
- machine-1-sensing
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Editor and operating-system files
+*.autosave
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Archives and generated packages
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+
+# Large media files
+*.avi
+*.flac
+*.m4a
+*.mkv
+*.mov
+*.mp3
+*.mp4
+*.wav
+*.webm
+
+# Local datasets and generated outputs
+data/
+dataset/
+datasets/
+cache/
+outputs/
