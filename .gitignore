@@ -1,4 +1,9 @@
 .venv/
 __pycache__/
+ HEAD
 *.pyc
 *.autosave
+
+*.py[cod]
+.pytest_cache/
+ machine-1-sensing
