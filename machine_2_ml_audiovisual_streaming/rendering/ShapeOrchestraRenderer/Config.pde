@@ -1,20 +1,20 @@
-final int OSC_RECEIVE_PORT = 12000; // portul pe care se asteapta mesajele OSC de la Wekinator
-final String OSC_CONTROL_ADDRESS = "/shape/control";// adresa OSC pentru mesajele de control(stare si intensitate)
-final int WINDOW_WIDTH = 1280; // latimea ferestrei de rendering
-final int WINDOW_HEIGHT = 720; // inaltimea ferestrei de rendering
-final int TARGET_FRAME_RATE = 60;// nr de cadre/sec
-// stari
-final int STATE_CALM = 1; // codul pt starea calm
-final int STATE_PULSE = 2; // codul pt starea pulse
-final int STATE_TENSION = 3; // codul pt starea tension
-final int STATE_CLIMAX = 4; // codul pt starea climax
-// setari initiale folosite de renderer
-final int DEFAULT_STATE = STATE_CALM;
-final float DEFAULT_INTENSITY = 0.2;
+final int OSC_RECEIVE_PORT = 12000; // Listen on this UDP port for OSC messages from Wekinator.
+final String OSC_CONTROL_ADDRESS = "/shape/control"; // Accept only OSC messages with this address.
+final int WINDOW_WIDTH = 1280; // Set the Processing window width in pixels.
+final int WINDOW_HEIGHT = 720; // Set the Processing window height in pixels.
+final int TARGET_FRAME_RATE = 60; // Ask Processing to draw 60 frames per second.
 
-final float MIN_INTENSITY = 0.0;
-final float MAX_INTENSITY = 1.0;
-final int MIN_STATE = STATE_CALM;
-final int MAX_STATE = STATE_CLIMAX;
-// setari pentru debug
-final boolean DEBUG_OSC = true;
+final int STATE_CALM = 1; // Numeric code for the calm visual/audio state.
+final int STATE_PULSE = 2; // Numeric code for the pulse visual/audio state.
+final int STATE_TENSION = 3; // Numeric code for the tension visual/audio state.
+final int STATE_CLIMAX = 4; // Numeric code for the climax visual/audio state.
+
+final int DEFAULT_STATE = STATE_CALM; // Start in the calm state before OSC messages arrive.
+final float DEFAULT_INTENSITY = 0.2; // Start with a low intensity before OSC messages arrive.
+
+final float MIN_INTENSITY = 0.0; // Lowest allowed intensity value.
+final float MAX_INTENSITY = 1.0; // Highest allowed intensity value.
+final int MIN_STATE = STATE_CALM; // Lowest valid state number.
+final int MAX_STATE = STATE_CLIMAX; // Highest valid state number.
+
+final boolean DEBUG_OSC = true; // Print useful OSC/audio messages to the console when true.
